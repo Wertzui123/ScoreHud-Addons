@@ -7,4 +7,4 @@ Currently all addons:
 
 ## BedrockClans Addon
 <code>{clan_name}</code>  |  Name of the players clan
-<code><br>{clan_members}</code>  |  Clan members of the players clan
+<br><code>{clan_members}</code>  |  Clan members of the players clan
