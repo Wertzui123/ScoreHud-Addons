@@ -45,7 +45,7 @@ namespace JackMD\ScoreHud\Addons
         public function getPlayerClanMembers(Player $player){
 			if($this->BedrockClans->isInClan($player)){
 		$clan = $this->BedrockClans->getClan($player);
-                return $clan->get("members");
+                return implode(" ", $clan->get("members"));
             }else{
                 return "No Clan";
             }
