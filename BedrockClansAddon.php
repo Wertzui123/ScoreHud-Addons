@@ -23,17 +23,29 @@ namespace JackMD\ScoreHud\Addons
          */
         public function getProcessedTags(Player $player): array{
             return [
-                "{clan}"   => $this->getPlayerClan($player)
+                "{clan_name}"   => $this->getPlayerClan($player),
+		 "{clan_members}"   => $this->getPlayerClanMembers($player)
             ];
         }
         /**
          * @param Player $player
-         * @return string
          */
         public function getPlayerClan(Player $player): string{
 			if($this->BedrockClans->isInClan($player)){
 		$clan = $this->BedrockClans->getClan($player);
                 return $clan->get("name");
+            }else{
+                return "No Clan";
+            }
+		}
+	    
+	            /**
+         * @param Player $player
+         */
+        public function getPlayerClan(Player $player): array{
+			if($this->BedrockClans->isInClan($player)){
+		$clan = $this->BedrockClans->getClan($player);
+                return $clan->get("members");
             }else{
                 return "No Clan";
             }
