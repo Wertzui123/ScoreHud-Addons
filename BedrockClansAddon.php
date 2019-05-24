@@ -31,7 +31,7 @@ namespace JackMD\ScoreHud\Addons
          * @return string
          */
         public function getPlayerClan(Player $player): string{
-            $clan = $this->BedrockClans->getClan();
+            $clan = $this->BedrockClans->getClan($player);
 			if($clan !== null){
                 return $clan->get("name");
             }else{
