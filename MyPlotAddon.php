@@ -1,6 +1,5 @@
-//This addon has the "Unlicense"
-
 <?php
+//This addon has the "Unlicense"
 declare(strict_types = 1);
 /**
  * @name MyPlotAddon
