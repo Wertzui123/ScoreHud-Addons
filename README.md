@@ -1,5 +1,5 @@
 # ScoreHud Addons
-Addons for Scorehud by JackMD. 
+Addons for Scorehud by Wertzui123. 
 
 Currently all addons:
 
