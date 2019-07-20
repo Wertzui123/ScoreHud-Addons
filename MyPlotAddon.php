@@ -1,5 +1,4 @@
 <?php
-//This addon has the "Unlicense"
 declare(strict_types = 1);
 /**
  * @name MyPlotAddon
@@ -24,7 +23,7 @@ namespace JackMD\ScoreHud\Addons
 		 */
 		public function getProcessedTags(Player $player): array{
 			return [
-				"{plotowner}" => $this->getPlot($this->MyPlot->getPlotByPosition($player->getPosition())),
+			"{plotowner}" => $this->getPlot($this->MyPlot->getPlotByPosition($player->getPosition())),
 			"{plotid}" => $this->getPlotID($this->MyPlot->getPlotByPosition($player->getPosition()))
             ];
 		}
