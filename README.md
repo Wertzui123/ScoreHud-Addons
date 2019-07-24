@@ -3,7 +3,7 @@ Addons for Scorehud by Wertzui123.
 
 Currently all addons:
 
-- BedrockCans Addon
+- BedrockClans Addon
 - MyPlot Addon
 
 ## BedrockClans Addon
