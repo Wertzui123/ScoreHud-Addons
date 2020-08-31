@@ -1,12 +1,12 @@
 <?php
 declare(strict_types=1);
+
 /**
  * @name BedrockClansAddon
  * @version 1.0.0
  * @main   JackMD\ScoreHud\Addons\BedrockClansAddon
  * @depend BedrockClans
  */
-
 namespace JackMD\ScoreHud\Addons {
 
     use JackMD\ScoreHud\addon\AddonBase;
@@ -43,13 +43,12 @@ namespace JackMD\ScoreHud\Addons {
         public function getPlayerClan(Player $player): string
         {
             $player = $this->BedrockClans->getPlayer($player);
-			if ($player->isInClan()) {
-                $clan = $player->getClan();
-                return $clan->getName();
+            if ($player->isInClan()) {
+                return $player->getClan()->getName();
             } else {
-                return "No Clan";
+                return "/";
             }
-		}
+        }
 
         /**
          * @param Player $player
@@ -59,13 +58,9 @@ namespace JackMD\ScoreHud\Addons {
         {
             $player = $this->BedrockClans->getPlayer($player);
             if ($player->isInClan()) {
-                if ($player->isLeader()) {
-                    return "Leader";
-                } else {
-                    return "Member";
-                }
+                return $player->getClan()->getRank($player->getPlayer());
             } else {
-                return "No Clan";
+                return "/";
             }
         }
 
@@ -77,11 +72,11 @@ namespace JackMD\ScoreHud\Addons {
         {
             $player = $this->BedrockClans->getPlayer($player);
             if ($player->isInClan()) {
-                $clan = $player->getClan();
-                return (string)count($clan->getMembers());
+                return (string)count($player->getClan()->getMembers());
             } else {
-                return "No Clan";
+                return "/";
             }
         }
+
     }
 }
