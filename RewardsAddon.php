@@ -30,8 +30,8 @@ namespace JackMD\ScoreHud\Addons {
         public function getProcessedTags(Player $player): array
         {
             return [
-                "{wait_time}" => $this->getWaitTime($player),
-                "{streak}" => $this->getStreak($player)
+                "{reward_wait_time}" => $this->getWaitTime($player),
+                "{reward_streak}" => $this->getStreak($player)
             ];
         }
 
